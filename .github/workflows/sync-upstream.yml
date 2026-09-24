@@ -15,7 +15,7 @@ jobs:
           rm -rf skills .claude-plugin src LICENSE
           mkdir -p skills src
           cp -r /tmp/up/.claude-plugin .
-          cp -r /tmp/up/skills/caveman skills/
+          for s in caveman caveman-review caveman-commit; do cp -r /tmp/up/skills/$s skills/; done
           cp -r /tmp/up/src/hooks src/
           cp /tmp/up/LICENSE .
           git config user.name sync-bot
